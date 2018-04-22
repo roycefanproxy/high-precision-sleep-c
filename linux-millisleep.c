@@ -1,9 +1,9 @@
 #include "millisleep.h"
 #include <errno.h>
 
-int32_t millisleep(int32_t millisecond)
+int32_t millisleep(int32_t milliseconds)
 {
-    struct timespec req = { millisecond / 1000u, millisecond % 1000u * 1000000u };
+    struct timespec req = { milliseconds / 1000, (milliseconds % 1000) * 1000000 };
     struct timespec rem;
 
     if (nanosleep(&req, &rem)) {
