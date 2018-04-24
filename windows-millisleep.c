@@ -3,7 +3,7 @@
 
 extern "C"
 {
-    __declspec(dllexport) __int32 millisleep(__int32 milliseconds)
+    __declspec(dllexport) __int32 linux_millisleep(__int32 milliseconds)
     {
         static bool initialized;
         static double ticks_per_millisec;

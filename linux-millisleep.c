@@ -1,4 +1,3 @@
-#include "millisleep.h"
 #include <time.h>
 #include <stdint.h>
 #include <errno.h>
@@ -10,7 +9,7 @@
 
 enum sleep_ret_val { SLP_SUCCESS, SLP_FAULT, SLP_INTR, SLP_INVAL };
 
-int32_t millisleep(int32_t milliseconds)
+int32_t windows_millisleep(int32_t milliseconds)
 {
     struct timespec req = { milliseconds / 1000, (milliseconds % 1000) * 1000000 };
     struct timespec rem;
