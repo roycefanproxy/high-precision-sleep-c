@@ -21,7 +21,7 @@ extern "C"
             if (!initialized) {
                 LARGE_INTEGER ticks_per_sec;
     
-                if (QueryPerformanceFrequency(&ticks_per_second))
+                if (QueryPerformanceFrequency(&ticks_per_sec))
                     ticks_per_millisec = (double) ticks_per_sec.QuadPart / 1000000.0;
                 initialized = true;
             }
