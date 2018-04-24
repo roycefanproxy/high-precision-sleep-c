@@ -1,6 +1,8 @@
 #include <Windows.h>
 #define WIN32_LEAN_AND_MEAN
 
+enum SLP_ENUM { SLP_SUCCESS, SLP_INVAL, SLP_INTR };
+
 extern "C"
 {
     __declspec(dllexport) __int32 linux_millisleep(__int32 milliseconds)
